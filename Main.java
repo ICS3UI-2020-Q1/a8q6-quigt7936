@@ -32,10 +32,11 @@ public class Main implements Runnable, ActionListener{
     // make the main panel
     mainPanel = new JPanel();
     mainPanel.setLayout(new BorderLayout());
+    frame.add(mainPanel);
 
     // make the button panel
     buttonPanel = new JPanel();
-    buttonPanel.setLayout(new GridLayout(3,4));
+    buttonPanel.setLayout(new GridLayout(4,3));
 
     // make the display
     display = new JTextField("CLOSE");
@@ -50,6 +51,7 @@ public class Main implements Runnable, ActionListener{
       // create a button
       JButton button = new JButton("" + i);
       button.setActionCommand("" + i);
+      button.addActionListener(this);
 
       // add button to the area
       numberButtons[i] = button;
